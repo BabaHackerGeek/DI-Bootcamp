@@ -1,0 +1,20 @@
+# Get the user input
+user_input = input("Please enter a string: ")
+
+# Check the length of the input string
+if len(user_input) < 10:
+    print("String not long enough")
+elif len(user_input) > 10:
+    print("String too long")
+else:
+    print("Perfect string")
+    
+    # Print the first and last characters
+    print("First character:", user_input[0])
+    print("Last character:", user_input[-1])
+    
+    # Construct and print the string character by character
+    constructed_string = ""
+    for char in user_input:
+        constructed_string += char
+        print(constructed_string)
