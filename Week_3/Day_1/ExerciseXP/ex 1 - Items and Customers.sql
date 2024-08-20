@@ -38,7 +38,7 @@ CREATE DATABASE public;
 CREATE TABLE items (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
-    price DECIMAL(10, 2) NOT NULL
+    price DECIMAL(10, 2) NOT NULL CHECK (price >= 0) -- Ensure price is not negative
 );
 
 -- Create the customers table
@@ -49,18 +49,18 @@ CREATE TABLE customers (
 );
 
 -- Insert data into the items table
-INSERT INTO items (name, price) VALUES(
+INSERT INTO items (name, price) VALUES
 ('Small Desk', 100),
 ('Large Desk', 300),
-('Fan', 80));
+('Fan', 80);
 
 -- Insert data into the customers table
-INSERT INTO customers (first_name, last_name) VALUES(
+INSERT INTO customers (first_name, last_name) VALUES
 ('Greg', 'Jones'),
 ('Sandra', 'Jones'),
 ('Scott', 'Scott'),
 ('Trevor', 'Green'),
-('Melanie', 'Johnson'));
+('Melanie', 'Johnson');
 
 -- 1. Retrieve all items
 SELECT * FROM items;
