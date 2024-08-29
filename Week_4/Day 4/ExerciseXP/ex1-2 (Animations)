@@ -1,0 +1,64 @@
+// 🌟 Exercise 1: Timer
+// Instructions:
+// Part I:
+// 1. Using setTimeout, call a function after 2 seconds.
+// 2. The function will alert “Hello World”.
+
+setTimeout(function() {
+    alert("Hello World");
+}, 2000); // 2000 milliseconds = 2 seconds
+
+// Part II:
+// 1. Using setTimeout, call a function after 2 seconds.
+// 2. The function will add a new paragraph <p>Hello World</p> to the <div id="container">.
+
+setTimeout(function() {
+    const container = document.getElementById("container");
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "Hello World";
+    container.appendChild(newParagraph);
+}, 2000); // 2000 milliseconds = 2 seconds
+
+// Part III:
+// 1. Using setInterval, call a function every 2 seconds.
+// 2. The function will add a new paragraph <p>Hello World</p> to the <div id="container">.
+// 3. The interval will be cleared (ie. clearInterval) when the user clicks the button or when there are 5 paragraphs in the container.
+
+const intervalId = setInterval(function() {
+    const container = document.getElementById("container");
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "Hello World";
+    container.appendChild(newParagraph);
+
+    // Clear the interval when there are 5 paragraphs
+    if (container.getElementsByTagName("p").length >= 5) {
+        clearInterval(intervalId);
+    }
+}, 2000); // 2000 milliseconds = 2 seconds
+
+// Event listener for the "Clear Interval" button
+document.getElementById("clear").addEventListener("click", function() {
+    clearInterval(intervalId);
+});
+
+
+// 🌟 Exercise 2: Move the box
+// Instructions:
+// 1. Use setInterval to move the <div id="animate"> to the right side of the <div id="container">, when the button is clicked on.
+// 2. The <div id="animate"> should move 1px to the right every millisecond, until it reaches the end of the <div id="container">.
+// 3. Use clearInterval as soon as the box reaches the right end side of the container.
+
+function myMove() {
+    const animate = document.getElementById("animate");
+    let position = 0; // Start position
+
+    // Set an interval to move the box
+    const intervalId = setInterval(function() {
+        if (position >= 350) { // Check if the box has reached the end of the container
+            clearInterval(intervalId); // Clear the interval to stop the movement
+        } else {
+            position++; // Increase position by 1px
+            animate.style.left = position + "px"; // Move the box
+        }
+    }, 1); // Move 1px every millisecond
+}
