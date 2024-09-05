@@ -1,0 +1,59 @@
+<!-- 🌟 Exercise 1 : HTML Form -->
+<!-- Instructions -->
+<!-- Create a form like the one below. The form should contain three inputs: -->
+<!-- - a small text input asking for a name -->
+<!-- - a larger textarea input to write a message -->
+<!-- - a submit input (“Send”) -->
+
+<!-- When you click the Send button, the form will be submitted with a GET method. -->
+<!-- (you can use the same HTML file for the action URL) -->
+<!-- Where will the sent data appear? -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+<body>
+    <h1>Contact Form</h1>
+    <form action="" method="GET">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+        <br><br>
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
+
+<!-- 🌟 Exercise 2 : HTML Form #2 -->
+<!-- Instructions -->
+<!-- Use the same form structure as Exercise 1. -->
+<!-- When you click the Send button, the form will be submitted with a POST method. -->
+<!-- (you can use the same HTML file for the action URL) -->
+<!-- Where will the sent data appear? Hint: Look at the Network Tab -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+<body>
+    <h1>Contact Form</h1>
+    <form action="" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+        <br><br>
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>
