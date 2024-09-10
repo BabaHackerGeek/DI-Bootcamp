@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(242, 34, 103, 0.764);
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+#task-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.listTasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.task input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.task label {
+    flex-grow: 1;
+}
+
+.task button {
+    background: red;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.task button:hover {
+    background: darkred;
+}
+
+#clear-button {
+    background: red;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+#clear-button:hover {
+    background: darkred;
+}
+
+/* Style for completed tasks */
+.task.completed label {
+    text-decoration: line-through;
+    color: red;
+}
