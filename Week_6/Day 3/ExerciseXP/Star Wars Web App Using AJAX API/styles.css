@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/030/353/225/small_2x/beautiful-night-sky-background-ai-generated-photo.jpg');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    color: #2db351;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#loading {
+    margin: 20px;
+    font-size: 18px;
+}
+
+#character-info {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+#error-message {
+    margin-top: 20px;
+    color: red;
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
+
+#character-info p strong,
+#character-info p span  {
+    color: rgb(228, 235, 44); 
+}
