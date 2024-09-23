@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        function checkForm() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            document.getElementById('submit').disabled = !(username && password);
+        }
+    </script>
+</head>
+<body>
+    <h1>Login</h1>
+    <form method="POST" action="/login">
+        <input type="text" id="username" name="username" placeholder="Username" oninput="checkForm()" required><br>
+        <input type="password" id="password" name="password" placeholder="Password" oninput="checkForm()" required><br>
+        <button type="submit" id="submit" disabled>Login</button>
+    </form>
+</body>
+</html>
