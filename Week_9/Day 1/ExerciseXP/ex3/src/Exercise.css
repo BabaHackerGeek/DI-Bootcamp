@@ -1,0 +1,16 @@
+/* Styling for the paragraph with the class "para" */
+.para {
+    background-color: #282c34;
+    color: white;
+    padding: 40px;
+    font-family: Arial;
+    text-align: center;
+  }
+  img {
+    max-width: 100%;  /* Ensure the image doesn't overflow the container */
+    height: auto;     /* Maintain aspect ratio */
+    max-height: 300px; /* Set a maximum height for the image */
+    display: block;   /* Removes the small gap below images */
+    margin: 20px auto; /* Center the image horizontally */
+  }
+  
