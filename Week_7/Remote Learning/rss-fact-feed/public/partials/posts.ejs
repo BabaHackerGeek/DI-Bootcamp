@@ -1,0 +1,10 @@
+<div>
+    <% posts.forEach(post => { %>
+      <div>
+        <h3><a href="<%= post.link %>" target="_blank"><%= post.title %></a></h3>
+        <p><%= post.pubDate %> | <%= post.creator %> | <%= post.category %></p>
+        <p><%= post.content %></p>
+      </div>
+    <% }) %>
+  </div>
+  
